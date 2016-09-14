@@ -1,0 +1,10 @@
+<ul id="tags">
+  <% @tags.each do |tags| %>
+    <li>
+      <%= link_to tags %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "<< Back to Articles List", articles_path %>
+<%= button_to "delete", tag_path(@tags), method: :delete %>
